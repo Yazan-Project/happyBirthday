@@ -1,0 +1,134 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: linear-gradient(135deg, #F3E8FF 0%, #F5F0FF 50%, #DCFCE7 100%);
+  font-family: 'Lato', sans-serif;
+  padding: 6rem 1rem 3rem 1rem;
+  position: relative;
+}
+
+.backButton {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  background: transparent;
+  border: none;
+  color: #5B21B6;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(139, 92, 246, 0.3);
+  border-radius: 24px;
+  padding: 3rem 2rem;
+  width: 100%;
+  max-width: 480px;
+  box-shadow: 0 10px 40px rgba(139, 92, 246, 0.1);
+  text-align: center;
+}
+
+.title {
+  font-family: 'Hulkbusters', 'Playfair Display', serif;
+  font-size: 2.5rem;
+  color: #5B21B6;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.subtitle {
+  color: #7C3AED;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #EDE9FE;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.2s;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  border-color: #8B5CF6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.1);
+}
+
+.button {
+  background: linear-gradient(135deg, #5B21B6, #166534);
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  font-family: 'Hulkbusters', 'Lato', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 14px rgba(91, 33, 182, 0.15);
+}
+
+.button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.inviteSection {
+  animation: fadeIn 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 5rem 1rem 2rem 1rem;
+  }
+  .backButton {
+    top: 1rem;
+    left: 1rem;
+    font-size: 0.9rem;
+  }
+  .card {
+    padding: 2rem 1.5rem;
+    border-radius: 16px;
+  }
+  .title {
+    font-size: 1.8rem;
+  }
+  .subtitle {
+    font-size: 0.85rem;
+  }
+  .input {
+    padding: 0.875rem 1.25rem;
+    font-size: 1rem;
+  }
+  .button {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+}

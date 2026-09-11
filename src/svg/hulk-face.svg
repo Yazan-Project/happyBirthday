@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" fill="none">
+  <!-- Hulk Face Silhouette -->
+  <defs>
+    <linearGradient id="hulkSkin" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A7C3E;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#2D5A27;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1B3A1A;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="hulkHair" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D1A0D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+    </linearGradient>
+    <filter id="hulkShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="3" dy="6" stdDeviation="5" flood-color="#0D1A0D" flood-opacity="0.5"/>
+    </filter>
+    <filter id="eyeGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Head shape -->
+  <path d="M100 10 
+           Q140 10 170 50 
+           Q190 90 185 130 
+           Q185 160 165 175 
+           Q155 185 140 185 
+           Q130 185 125 178 
+           Q115 195 100 198 
+           Q85 195 75 178 
+           Q60 185 50 185 
+           Q35 185 25 175 
+           Q10 160 10 130 
+           Q10 90 30 50 
+           Q60 10 100 10 Z" 
+        fill="url(#hulkSkin)" filter="url(#hulkShadow)"/>
+  
+  <!-- Hair -->
+  <path d="M100 10 
+           Q130 -10 155 25 
+           Q165 40 170 50 
+           Q160 35 145 20 
+           Q130 10 110 15 
+           Q100 10 90 15 
+           Q70 10 55 20 
+           Q40 35 30 50 
+           Q40 25 55 15 
+           Q70 0 100 10 Z" 
+        fill="url(#hulkHair)"/>
+  
+  <!-- Eyebrows -->
+  <path d="M55 75 Q65 65 80 70 Q75 60 70 65 Q60 75 50 72" 
+        fill="#0D1A0D" filter="url(#hulkShadow)"/>
+  <path d="M145 75 Q135 65 120 70 Q125 60 130 65 Q140 75 150 72" 
+        fill="#0D1A0D" filter="url(#hulkShadow)"/>
+  
+  <!-- Eyes -->
+  <ellipse cx="70" cy="85" rx="12" ry="8" fill="#FFFFFF"/>
+  <ellipse cx="130" cy="85" rx="12" ry="8" fill="#FFFFFF"/>
+  <ellipse cx="70" cy="85" rx="6" ry="7" fill="#1B3A1A" filter="url(#eyeGlow)"/>
+  <ellipse cx="130" cy="85" rx="6" ry="7" fill="#1B3A1A" filter="url(#eyeGlow)"/>
+  <circle cx="68" cy="82" r="2" fill="#FFFFFF" opacity="0.8"/>
+  <circle cx="128" cy="82" r="2" fill="#FFFFFF" opacity="0.8"/>
+  
+  <!-- Nose -->
+  <path d="M95 105 Q100 95 105 105 Q102 110 100 112 Q98 110 95 105" 
+        fill="url(#hulkSkin)" filter="url(#hulkShadow)"/>
+  <ellipse cx="92" cy="110" rx="5" ry="3" fill="#1B3A1A" opacity="0.6"/>
+  <ellipse cx="108" cy="110" rx="5" ry="3" fill="#1B3A1A" opacity="0.6"/>
+  
+  <!-- Mouth -->
+  <path d="M70 135 Q85 150 100 145 Q115 150 130 135" 
+        stroke="#0D1A0D" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M75 135 Q85 130 100 132 Q115 130 125 135" 
+        stroke="#0D1A0D" stroke-width="1.5" fill="none" stroke-linecap="round" opacity="0.5"/>
+  
+  <!-- Teeth hint -->
+  <path d="M85 140 Q90 138 95 140 Q95 143 90 142 Q85 143 85 140" 
+        fill="#FFFFFF" opacity="0.9"/>
+  <path d="M105 140 Q110 138 115 140 Q115 143 110 142 Q105 143 105 140" 
+        fill="#FFFFFF" opacity="0.9"/>
+  
+  <!-- Ears -->
+  <ellipse cx="35" cy="95" rx="8" ry="14" fill="url(#hulkSkin)" transform="rotate(-15 35 95)" filter="url(#hulkShadow)"/>
+  <ellipse cx="165" cy="95" rx="8" ry="14" fill="url(#hulkSkin)" transform="rotate(15 165 95)" filter="url(#hulkShadow)"/>
+  
+  <!-- Ear details -->
+  <path d="M35 95 Q40 100 40 105" stroke="#1B3A1A" stroke-width="1.5" fill="none" opacity="0.4"/>
+  <path d="M165 95 Q160 100 160 105" stroke="#1B3A1A" stroke-width="1.5" fill="none" opacity="0.4"/>
+  
+  <!-- Cheek definition -->
+  <path d="M165 130 Q170 150 155 175" stroke="#1B3A1A" stroke-width="2" fill="none" opacity="0.3"/>
+  <path d="M35 130 Q30 150 45 175" stroke="#1B3A1A" stroke-width="2" fill="none" opacity="0.3"/>
+</svg>

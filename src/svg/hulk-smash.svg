@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150" fill="none">
+  <!-- SMASH Text Effect -->
+  <defs>
+    <linearGradient id="smashGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2D5A27;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#4A7C3E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1B3A1A;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="crackGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#5BA84A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2D5A27;stop-opacity:1" />
+    </linearGradient>
+    <filter id="smashShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="4" dy="8" stdDeviation="6" flood-color="#0D1A0D" flood-opacity="0.5"/>
+    </filter>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="debrisPattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#3D6B32" opacity="0.3"/>
+      <circle cx="15" cy="15" r="0.5" fill="#3D6B32" opacity="0.2"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background crack texture -->
+  <rect x="0" y="0" width="300" height="150" fill="url(#debrisPattern)" opacity="0.1"/>
+  
+  <!-- Crack lines behind text -->
+  <g stroke="url(#crackGradient)" stroke-width="2" opacity="0.4" filter="url(#smashShadow)">
+    <path d="M20 80 Q60 60 100 90 Q140 120 180 70 Q220 20 260 90" fill="none" stroke-linecap="round"/>
+    <path d="M50 150 Q80 120 110 100 Q140 80 180 110 Q220 140 250 100" fill="none" stroke-linecap="round"/>
+    <path d="M250 30 Q200 60 150 40 Q100 20 50 50" fill="none" stroke-linecap="round"/>
+  </g>
+  
+  <!-- S -->
+  <path d="M30 40 Q50 25 75 30 Q95 35 100 50 Q105 65 95 80 Q80 95 55 90 Q35 85 30 65 Q25 45 30 40" 
+        fill="url(#smashGradient)" filter="url(#smashShadow)"/>
+  
+  <!-- M -->
+  <path d="M110 90 L110 30 Q120 20 130 30 L145 70 L160 30 Q170 20 180 30 L180 90 L170 90 L155 60 L140 90 L130 90 L125 60 L110 90 Z" 
+        fill="url(#smashGradient)" filter="url(#smashShadow)"/>
+  
+  <!-- A -->
+  <path d="M190 90 L210 30 Q215 20 225 30 L245 90 L235 90 L215 40 L200 90 L190 90 Z 
+         M203 60 L208 55 Q215 50 222 55 L227 60 L203 60 Z" 
+        fill="url(#smashGradient)" filter="url(#smashShadow)"/>
+  
+  <!-- S (second) -->
+  <path d="M255 40 Q275 25 300 30 Q305 35 300 50 Q295 65 285 80 Q270 95 245 90 Q225 85 220 65 Q215 45 220 40" 
+        fill="url(#smashGradient)" filter="url(#smashShadow)"/>
+  
+  <!-- H -->
+  <path d="M30 100 L30 130 Q25 140 40 140 L40 110 L60 110 L60 140 Q75 140 75 130 L75 100 L65 100 L65 110 L45 110 L45 100 L30 100 Z" 
+        fill="url(#smashGradient)" filter="url(#smashShadow)"/>
+  
+  <!-- Impact burst behind text -->
+  <g fill="#5BA84A" opacity="0.3" filter="url(#glow)">
+    <ellipse cx="150" cy="70" rx="120" ry="20" transform="rotate(-5 150 70)"/>
+    <ellipse cx="150" cy="70" rx="20" ry="120" transform="rotate(-5 150 70)"/>
+    <ellipse cx="150" cy="70" rx="80" ry="12" transform="rotate(10 150 70)"/>
+    <ellipse cx="150" cy="70" rx="12" ry="80" transform="rotate(10 150 70)"/>
+  </g>
+  
+  <!-- Debris particles -->
+  <g fill="#3D6B32" opacity="0.6">
+    <circle cx="20" cy="140" r="3"/>
+    <circle cx="50" cy="145" r="2"/>
+    <circle cx="100" cy="142" r="2.5"/>
+    <circle cx="180" cy="148" r="2"/>
+    <circle cx="240" cy="144" r="3"/>
+    <circle cx="280" cy="146" r="1.5"/>
+    <circle cx="30" cy="10" r="2"/>
+    <circle cx="120" cy="15" r="1.5"/>
+    <circle cx="200" cy="8" r="2.5"/>
+    <circle cx="270" cy="12" r="1.5"/>
+  </g>
+</svg>

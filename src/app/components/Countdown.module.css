@@ -1,0 +1,81 @@
+.section {
+  padding: 5rem 2rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.label {
+  font-family: 'Hulkbusters', 'Playfair Display', serif;
+  font-style: normal;
+  font-size: 1.1rem;
+  color: #5B21B6;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+
+.grid {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.unit {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.number {
+  font-family: 'Hulkbusters', 'Playfair Display', serif;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1;
+  background: linear-gradient(135deg, #5B21B6 0%, #8B5CF6 50%, #166534 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  min-width: 5rem;
+  display: block;
+}
+
+.unitLabel {
+  font-family: 'Hulkbusters', 'Lato', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #166534;
+}
+
+.separator {
+  font-family: 'Hulkbusters', 'Playfair Display', serif;
+  font-size: 3.5rem;
+  color: #8B5CF6;
+  align-self: flex-start;
+  padding-top: 0.3rem;
+  line-height: 1;
+}
+
+@media (max-width: 600px) {
+  .number {
+    font-size: 2.2rem;
+    min-width: 2.5rem;
+  }
+  .grid {
+    gap: 0.5rem;
+  }
+  .separator {
+    font-size: 2rem;
+    padding-top: 0.2rem;
+  }
+  .unitLabel {
+    font-size: 0.6rem;
+  }
+  .label {
+    font-size: 0.9rem;
+  }
+}
