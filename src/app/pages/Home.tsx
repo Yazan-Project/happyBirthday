@@ -12,13 +12,17 @@ export function Home() {
       <section className={styles.hero}>
         <div className={styles.heroBg} />
         <div className={styles.heroContent}>
-          <span className={styles.badge}>✦ Você está convidado ✦</span>
-          <span className={styles.eyebrow}>Chegou a hora de</span>
-          <h1 className={styles.title}>
-            <span className={styles.titleAccent}>SMASH</span><br />
-            Aniversario
-          </h1>
-          <p className={styles.subtitle}>Victor Gabriel</p>
+          <div style={{ position: 'relative' }}>
+            <span className={styles.badge}>✦ Você está convidado ✦</span>
+            <span className={styles.eyebrow}>Chegou a hora de</span>
+            <h1 className={styles.title}>
+              <span className={styles.titleAccent}>SMASH</span><br />
+              Aniversario
+            </h1>
+            <p className={styles.subtitle}>Victor Gabriel</p>
+          </div>
+
+          <img src="/hulk.png" alt="Hulk" style={{ width: '100%', maxWidth: '320px', margin: '0 auto 2rem', filter: 'drop-shadow(0 10px 25px rgba(34,197,94,0.4))', animation: 'smashIn 1s cubic-bezier(0.34, 1.56, 0.64, 1) 0.5s both', position: 'relative', zIndex: 2 }} />
 
           <div className={styles.heroMeta}>
             <div className={styles.metaItem}>
@@ -37,25 +41,24 @@ export function Home() {
             </div>
           </div>
 
-          <a 
-            href="https://share.google/bfPzBqoD9rGAvbVRo" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className={styles.mapLink}
-          >
-            <Navigation size={16} strokeWidth={2.5} />
-            <span>Ver localização no mapa</span>
-          </a>
+          <div className={styles.buttonGroup}>
+            <a 
+              href="https://share.google/bfPzBqoD9rGAvbVRo" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className={styles.mapLink}
+            >
+              <Navigation size={16} strokeWidth={2.5} />
+              <span>Ver localização no mapa</span>
+            </a>
 
-          <button className={styles.generateButton} onClick={() => window.location.href = '/convite'}>
-            Gerar meu convite
-          </button>
+            <button className={styles.generateButton} onClick={() => window.location.href = '/convite'}>
+              Gerar meu convite
+            </button>
+          </div>
         </div>
 
-        <div className={styles.scrollHint}>
-          <span className={styles.scrollLabel}>role para baixo</span>
-          <div className={styles.scrollLine} />
-        </div>
+
       </section>
 
       {/* ── Birthday Kid ── */}

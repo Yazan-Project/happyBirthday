@@ -33,6 +33,9 @@ export function InviteCard({ cardRef, guestName }: InviteCardProps) {
         boxSizing: "border-box"
       }}>
         {/* Header */}
+        <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '0.5rem' }}>
+          <img src="/hulk-logo-png_seeklogo-344713.png" alt="Hulk Logo" style={{ height: '55px', filter: 'drop-shadow(0 2px 4px rgba(34,197,94,0.2))' }} />
+        </div>
         <h2 style={{ fontFamily: "'Hulkbusters', 'Playfair Display', serif", fontSize: "1.6rem", color: "#5B21B6", margin: "0 0 0.5rem 0", letterSpacing: "1px", textTransform: "uppercase" }}>
           ANIVERSARIO HULK
         </h2>
